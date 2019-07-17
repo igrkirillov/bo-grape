@@ -6,8 +6,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="gkretail-astra" />
         <module name="server" />
+        <module name="gkretail-astra" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

@@ -1,4 +1,4 @@
-package ru.x5.gkretail.astra;
+package ru.x5.gkretail.grape;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

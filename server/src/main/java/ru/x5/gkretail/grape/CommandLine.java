@@ -1,4 +1,4 @@
-package ru.x5.gkretail.astra;
+package ru.x5.gkretail.grape;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;

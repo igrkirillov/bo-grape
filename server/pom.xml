@@ -12,14 +12,9 @@
   <artifactId>server</artifactId>
 
   <dependencies>
-<!--    <dependency>-->
-<!--      <groupId>ru.x5.gkretail</groupId>-->
-<!--      <artifactId>jpa</artifactId>-->
-<!--      <version>${project.version}</version>-->
-<!--    </dependency>-->
     <dependency>
       <groupId>ru.x5.gkretail</groupId>
-      <artifactId>bo-tobacco</artifactId>
+      <artifactId>bo-tobacco-jdbc</artifactId>
       <version>1.0.0</version>
     </dependency>
   </dependencies>

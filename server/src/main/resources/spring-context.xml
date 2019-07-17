@@ -3,13 +3,20 @@
         xmlns="http://www.springframework.org/schema/beans"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xmlns:context="http://www.springframework.org/schema/context"
+        xmlns:tx="http://www.springframework.org/schema/tx"
         xsi:schemaLocation="
-    http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
-    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+    http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-4.0.xsd
+    http://www.springframework.org/schema/tx
+    http://www.springframework.org/schema/tx/spring-tx.xsd">
 
   <context:annotation-config/>
 
-  <bean id="cmdBean" class="ru.x5.gkretail.astra.CommandLine"/>
+  <tx:annotation-driven transaction-manager="txManager" />
+
+  <bean id="cmdBean" class="ru.x5.gkretail.grape.CommandLine"/>
 
   <bean id="dataSource" class="org.postgresql.jdbc2.optional.PoolingDataSource">
     <property name="dataSourceName" value="Grape Data Source"/>
@@ -24,9 +31,8 @@
     <constructor-arg ref="dataSource"/>
   </bean>
 
-  <!--bo tobacco framework configuration-->
-  <bean class="ru.x5.gkretail.tobacco.spring.config.TobaccoSpringConfiguration">
+  <!--bo tobacco module configuration-->
+  <bean class="ru.x5.gkretail.bo_tobacco.config.TobaccoSpringConfiguration">
     <constructor-arg ref="dataSource"/>
-    <constructor-arg value="txManager"/>
   </bean>
 </beans>
